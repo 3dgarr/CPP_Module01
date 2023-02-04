@@ -20,41 +20,35 @@ namespace	HarlFilter
 	void	HarlFilter(const std::string &levelName, Harl &harlik)
 	{
 		int index = get_level_index(levelName);
-		
-		while (index != 5)
+		if (index == 4)
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		else
 		{
-			switch (index)
+			while (index != 4)
 			{
-				case	0:
-					std::cout << "[ DEBUG ]" << std::endl;
-					harlik.complain(index);
-					std::cout << std::endl;
-					index++;
-					break;
-				case	1:
-					std::cout << "[ INFO ]" << std::endl;
-					harlik.complain(index);
-					std::cout << std::endl;
-					index++;
-					break;
+				switch (index)
+				{
+					case	0:
+						std::cout << "[ DEBUG ]" << std::endl;
+						harlik.complain(index);
+						break;
+					case	1:
+						std::cout << "[ INFO ]" << std::endl;
+						harlik.complain(index);
+						break;
 
-				case	2:
-					std::cout << "[ WARNING ]" << std::endl;
-					harlik.complain(index);
-					std::cout << std::endl;
-					index++;
-					break;
-				case	3:
-					std::cout << "[ ERROR ]" << std::endl;
-					harlik.complain(index);
-					std::cout << std::endl;
-					index++;
-					break;
-				default:
-					std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-					index++;
-					break;
-			}			
+					case	2:
+						std::cout << "[ WARNING ]" << std::endl;
+						harlik.complain(index);
+						break;
+					case	3:
+						std::cout << "[ ERROR ]" << std::endl;
+						harlik.complain(index);
+						break;
+				}			
+				std::cout << std::endl;
+				index++;
+			}
 		}
 	}
 
