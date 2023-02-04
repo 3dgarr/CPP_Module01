@@ -7,7 +7,6 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "$(YELLOW)🌪 Compiling...$(DEFAULT)"
 	@$(CXX) $(OBJS) -o $(NAME)
 	@echo "$(GREEN)✅Compiled!$(DEFAULT)"
 

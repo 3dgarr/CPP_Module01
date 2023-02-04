@@ -1,8 +1,8 @@
 CXX = c++
-NAME = phonebook
+NAME = violence
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -g -ggdb3 -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
