@@ -1,5 +1,5 @@
 CXX = c++
-NAME = phonebook
+NAME = harl
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -8,15 +8,15 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CXX) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)✅Compiled!$(DEFAULT)"
+	@echo "$(GREEN)✅ Compiled!$(DEFAULT)"
 
 clean:
 	@rm -f *.o
-	@echo "$(RED)🧨Objects are destroyed$(DEFAULT)"
+	@echo "$(RED)🧨 Objects are destroyed$(DEFAULT)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(RED)🧨Executable is destroyed$(DEFAULT)"
+	@echo "$(RED)🧨 Executable is destroyed$(DEFAULT)"
 
 
 re: fclean all

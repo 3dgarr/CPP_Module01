@@ -12,10 +12,10 @@ class Harl
 		~Harl();
 	
 	private:
-	void			debug( void );
-	void			info( void );
-	void			warning( void );
-	void			error( void );
+	void			debug( void ) const;
+	void			info( void ) const;
+	void			warning( void ) const;
+	void			error( void ) const;
 	int				get_level_index(const std::string	levelName) const;
 	
 	private:
@@ -23,4 +23,4 @@ class Harl
 	
 };
 
-typedef	void (Harl::*HarlMemFn)(void);
+typedef	void (Harl::*HarlMemFn)(void) const;
