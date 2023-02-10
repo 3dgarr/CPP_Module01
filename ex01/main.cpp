@@ -12,4 +12,5 @@ int main()
 	zombies = zombieHorde(10, "bagrat");
 	delete [] zombies;
 	zombies = NULL;
+	return (0);
 }
