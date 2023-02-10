@@ -12,5 +12,5 @@ int main()
 	 harlik.complain("anotherblah");
 	 harlik.complain("error");
 	 harlik.complain("");
-
+	return (0);
 }

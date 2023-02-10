@@ -3,10 +3,11 @@
 
 class Zombie
 {
-	private:
-		const std::string	name;
 	public:
-		void	announce();
+		void	announce() const;
 		Zombie(const std::string &z_name);
 		~Zombie();
+	
+	private:
+		const std::string	name;
 };

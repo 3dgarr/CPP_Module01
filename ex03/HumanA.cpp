@@ -1,9 +1,9 @@
 #include "./HumanA.hpp"
 
-HumanA::HumanA(std::string _name, Weapon& _weapon): name(_name), weapon(_weapon)
-{
-
-}
+HumanA::HumanA(const std::string &_name, Weapon& _weapon)
+	: name(_name), 
+	weapon(_weapon)
+{}
 
 HumanA::~HumanA(){}
 

@@ -5,7 +5,7 @@
 class Harl
 {
 	public:
-		void complain(int i);		
+		void	complain(int i) const;		
 
 	public:
 		Harl();
@@ -16,7 +16,6 @@ class Harl
 	void			info( void ) const;
 	void			warning( void ) const;
 	void			error( void ) const;
-	int				get_level_index(const std::string	levelName) const;
 	
 	private:
 	const int		count_of_functions;

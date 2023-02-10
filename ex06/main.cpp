@@ -21,7 +21,7 @@ namespace	HarlFilter
 	{
 		int index = get_level_index(levelName);
 		if (index == 4)
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
 		else
 		{
 			while (index != 4)
@@ -51,7 +51,6 @@ namespace	HarlFilter
 			}
 		}
 	}
-
 }
 
 int main(int argc, char *argv[])

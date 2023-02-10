@@ -1,21 +1,14 @@
 #include "./Replace.hpp"
 
 Replace::Replace(char *in, char *rplcmnt, char *rplcr) 
-	: inFile(in),
-	replacement(rplcmnt),
-	replacer(rplcr),
-	outFile(inFile + ".replace")
-{
-	std::cout << inFile <<std::endl;
-	std::cout << outFile <<std::endl;
-	std::cout << replacement <<std::endl;
-	std::cout << replacer <<std::endl;
-}
+	:	inFile(in),
+		replacement(rplcmnt),
+		replacer(rplcr),
+		outFile(inFile + ".replace")
+{}
 
-Replace::~Replace()
-{
-	
-}
+Replace::~Replace(){}
+
 void Replace::replace(std::string& str, const std::string& oldStr, const std::string& newStr) const
 {
 	size_t position = 0;
@@ -27,11 +20,10 @@ void Replace::replace(std::string& str, const std::string& oldStr, const std::st
 	}
 }
 
-
 int	Replace::startTask() const
 {
 	std::ifstream	input(inFile);
-	std::string	line;
+	std::string		line;
 
 	if (!input)
 	{
@@ -52,7 +44,6 @@ int	Replace::startTask() const
   	}
 	input.close();
 	output.close();
-
 
 	return (0);
 }

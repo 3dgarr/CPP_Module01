@@ -1,12 +1,10 @@
-#include "./Harl.hpp"
+#include "Harl.hpp"
 
 Harl::Harl(): count_of_functions(4)
-{
-}
+{}
 
 Harl::~Harl()
-{
-}
+{}
 
 void	Harl::debug(void) const
 {
@@ -28,23 +26,7 @@ void	Harl::error(void) const
 	std::cerr << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-int	Harl::get_level_index(const std::string	levelName) const
-{
-	const std::string levels[] = 
-	{
-		"debug", 
-		"info", 
-		"warning", 
-		"error"
-	};
-	int	i = -1;
-	while (++i < count_of_functions && levelName != levels[i])
-	;
-	return (i);
-
-}
-
-void Harl::complain(int i)
+void Harl::complain(int i) const
 {
 	const HarlMemFn	HarlMemFnPtrs[] = 
 	{

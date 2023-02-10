@@ -11,6 +11,7 @@ class Replace
 	public:
 		Replace(char *in, char *replacement, char *replacer);
 		~Replace();
+		
 	private:
 		void replace(std::string& str, const std::string& oldStr, const std::string& newStr) const;
 

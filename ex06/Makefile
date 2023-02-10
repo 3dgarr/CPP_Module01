@@ -7,7 +7,6 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "$(YELLOW)🌪 Compiling...$(DEFAULT)"
 	@$(CXX) $(OBJS) -o $(NAME)
 	@echo "$(GREEN)✅ Compiled!$(DEFAULT)"
 
@@ -18,7 +17,6 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "$(RED)🧨 Executable is destroyed$(DEFAULT)"
-
 
 re: fclean all
 

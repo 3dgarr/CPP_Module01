@@ -1,6 +1,7 @@
 #include "./Harl.hpp"
 
-Harl::Harl(): count_of_functions(4)
+Harl::Harl()
+	: count_of_functions(4)
 {
 }
 
@@ -44,7 +45,7 @@ int	Harl::get_level_index(const std::string	levelName) const
 
 }
 
-void Harl::complain( std::string	levelName)
+void Harl::complain( std::string levelName) const
 {
 	int		i = 0;
 	const HarlMemFn	HarlMemFnPtrs[] = 

@@ -8,8 +8,7 @@ int main()
 
 	delete[] zombies;
 	zombies = NULL;
-
-
+	
 	zombies = zombieHorde(10, "bagrat");
 	delete [] zombies;
 	zombies = NULL;
